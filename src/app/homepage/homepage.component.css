@@ -1,0 +1,77 @@
+.homepage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #F6F6F2; /* Light blue-gray background */
+}
+
+.title {
+  font-size: 36px;
+  color: #4f7476;
+; /* Darker gray for better contrast */
+  margin-bottom: 40px;
+}
+
+.food-buckets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.food-bucket {
+  background-color:#d1dcdd; /* White background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.food-bucket:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+.bucket-title {
+  font-size: 24px;
+  color: #4f7476; /* Darker gray for text */
+  padding: 10px;
+  border-bottom: 2px solid #ececec; /* Light border for separation */
+}
+
+.food-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.food-item {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.food-item:hover {
+  background-color: #d2cfd2; /* Light blue hover effect */
+}
+
+.food-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.food-image:hover {
+  transform: scale(1.1);
+}
+
+.food-name {
+  font-size: 18px;
+  color: #2b6585; /* Medium gray for text */
+}

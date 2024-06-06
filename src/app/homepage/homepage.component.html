@@ -1,0 +1,14 @@
+<div class="homepage-container">
+  <h1 class="title">Welcome to Foodie Heaven</h1>
+  <div class="food-buckets">
+    <div class="food-bucket" *ngFor="let bucket of foodBuckets">
+      <h2 class="bucket-title">{{ bucket.title }}</h2>
+      <ul class="food-list">
+        <li *ngFor="let item of bucket.items" class="food-item">
+          <!-- <img [src]="item.image" alt="{{ item.name }}" class="food-image" /> -->
+          <span class="food-name">{{ item.name }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
