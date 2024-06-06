@@ -1,0 +1,77 @@
+/* project-detail.component.css */
+.project-detail {
+  background-image: url('/path-to-your-image.jpg'); /* Ensure this path is correct */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Fixes the background image so it doesn't scroll with the content */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Adjusted to start from the top */
+  text-align: center;
+  overflow: hidden; /* Ensures no overflow issues */
+}
+
+.details-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 1200px; /* Optional: Limit the max width for better readability */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling */
+  height: calc(100vh - 40px); /* Adjust height to fit within viewport, subtracting padding */
+}
+
+/* Style for the room details */
+.room {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+  box-sizing: border-box;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  transition: height 0.3s ease; /* Smooth transition for height change */
+}
+
+.room.reverse {
+  flex-direction: row-reverse;
+}
+
+.room-image-wrapper {
+  width: 70%; /* Larger width for the image wrapper to accommodate scaling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Allow image overflow to be visible */
+}
+
+.room-image {
+  width: 100%; /* Image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 400px; /* Optional: Limit the height for larger images */
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.room-image:hover {
+  transform: scale(0.9); /* Scale the image by 220% on hover */
+}
+
+.room-description {
+  width: 30%; /* Smaller width for description to allow image expansion */
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.6); /* Optional: Add background for contrast */
+  color: white;
+  height: 100%; /* Ensures description matches image height */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  text-align: left; /* Align text to the left for better readability */
+  transition: width 0.3s ease; /* Smooth transition for width change */
+}

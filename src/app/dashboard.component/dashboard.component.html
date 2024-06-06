@@ -1,0 +1,27 @@
+<div class="background-image">
+  <div class="overlay">
+    <header>
+      <h1>Aakritee pathak</h1>
+      <p>Architect & Designer</p>
+    </header>
+    <main>
+      <section class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project-grid">
+          <div class="project" *ngFor="let project of projects" (click)="navigateToProject(project.name)">
+            <img [src]="project.image" [alt]="project.name">
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>        
+      </section>
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:aakriteepathak@gmail.com">aakriteepathak&#64;gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/aakritee-pathak-33a104283/" target="_blank">Aakritee Pathak</a></p>
+        <p>phone number: <a href="#">9842020220</a></p>
+      </section>
+    </main>
+  </div>
+</div>
+
