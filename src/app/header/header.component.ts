@@ -5,5 +5,8 @@ import { Component } from "@angular/core";
   templateUrl:'./header.component.html'
 })
 export class HeaderComponent{
-  searchText:String = "enter your searchText"
+  name:String='';
+  callMe(receiveEvent:any){
+    this.name=receiveEvent.target.value;
+  }
 }
