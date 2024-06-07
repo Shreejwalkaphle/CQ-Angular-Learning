@@ -5,5 +5,9 @@ import { Component } from "@angular/core";
   templateUrl:'./header.component.html'
 })
 export class HeaderComponent{
-  name:String='shreejwal';
+collectionOfObject:any=[
+{name:"shreejwal",caste:"kaphle"},
+{name:"ram",caste:"thapa"},
+{name:"gorye",caste:"kaphle"}
+];
 }
