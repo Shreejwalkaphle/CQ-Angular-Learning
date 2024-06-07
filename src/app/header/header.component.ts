@@ -6,7 +6,4 @@ import { Component } from "@angular/core";
 })
 export class HeaderComponent{
   name:String='shreejwal';
-  callMe(receiveEvent:any){
-    this.name=receiveEvent.target.value;
-  }
 }
