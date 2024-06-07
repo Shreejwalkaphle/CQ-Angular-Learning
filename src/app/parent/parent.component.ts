@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
   templateUrl:"./parent.component.html"
 })
 export class Parent{
-  receiverFunction(receivedData:String){ //jun type ko data child le emit garcha tei type ko data parent le receive garcha.
+  receiverFunction(receivedData:String){
   console.log(receivedData+" is received in parent");
   }
 }
