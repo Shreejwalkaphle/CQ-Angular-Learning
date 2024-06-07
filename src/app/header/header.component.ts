@@ -1,13 +1,18 @@
 import { Component } from "@angular/core";
+import { Testservice } from "../services/testservice.component";
 
 @Component({
   selector:'app-header',
-  templateUrl:'./header.component.html'
+  templateUrl:'./header.component.html',
+  providers:[Testservice]
 })
 export class HeaderComponent{
-collectionOfObject:any=[
-{name:"shreejwal",caste:"kaphle"},
-{name:"ram",caste:"thapa"},
-{name:"gorye",caste:"kaphle"}
-];
+
+  constructor(private testService:Testservice){
+  }
+
+callMe(){
+  this.testService.serviceMethod();
+}
+
 }
