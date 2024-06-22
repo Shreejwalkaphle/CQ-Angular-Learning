@@ -1,0 +1,14 @@
+.animated-container {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #ffccff, #ccffff);
+  border: 5px solid #ff6699;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.animated-container:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ccffff, #ffccff);
+}

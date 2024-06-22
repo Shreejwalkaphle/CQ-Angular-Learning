@@ -5,10 +5,17 @@ import { HeaderComponent } from "./header/header.component";
 import { FormsModule } from "@angular/forms";
 import { Parent } from "./parent/parent.component";
 import { Child } from "./child/child.component";
+import { Component1 } from "./containers/container1/container1.component";
+import { Product } from "./products/product.component";
+import { RouterModule, Routes } from "@angular/router";
+
+const routes:Routes = [{
+  path:'product', component:Product
+}]
 
 @NgModule({
-  declarations:[AppComponent,HeaderComponent,Parent,Child],
-  imports:[BrowserModule,FormsModule],
+  declarations:[AppComponent,HeaderComponent,Parent,Child,Component1,Product],
+  imports:[BrowserModule,FormsModule,RouterModule.forRoot(routes)],
   providers:[],
   bootstrap:[AppComponent]
 })
