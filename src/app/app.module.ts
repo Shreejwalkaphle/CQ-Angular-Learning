@@ -7,15 +7,13 @@ import { Parent } from "./parent/parent.component";
 import { Child } from "./child/child.component";
 import { Component1 } from "./containers/container1/container1.component";
 import { Product } from "./products/product.component";
-import { RouterModule, Routes } from "@angular/router";
+import { AppRoutingModule } from "./app.routing.module";
 
-const routes:Routes = [{
-  path:'product', component:Product
-}]
+
 
 @NgModule({
   declarations:[AppComponent,HeaderComponent,Parent,Child,Component1,Product],
-  imports:[BrowserModule,FormsModule,RouterModule.forRoot(routes)],
+  imports:[BrowserModule,FormsModule,AppRoutingModule],
   providers:[],
   bootstrap:[AppComponent]
 })
