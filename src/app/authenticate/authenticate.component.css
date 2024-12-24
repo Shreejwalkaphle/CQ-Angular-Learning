@@ -1,0 +1,30 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full page height */
+  background: linear-gradient(to right, #e0ffe0, #b2f5b2); /* Subtle gradient background */
+}
+
+.auth-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #32cd32, #3cb371);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.auth-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.auth-button:active {
+  transform: scale(1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

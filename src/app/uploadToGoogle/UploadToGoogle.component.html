@@ -1,0 +1,12 @@
+<div class="upload-container">
+  <h2>Upload File to Google Drive</h2>
+  <form (submit)="onUploadFile()">
+    <input
+      type="file"
+      (change)="onFileSelected($event)"
+      accept=".jpg,.png,.pdf,.docx,.xlsx,.txt"
+    />
+    <button type="submit" [disabled]="!selectedFile">Upload</button>
+  </form>
+  <p *ngIf="uploadProgress">Uploading... {{ uploadProgress }}%</p>
+</div>
