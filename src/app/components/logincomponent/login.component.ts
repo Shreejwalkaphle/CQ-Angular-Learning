@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../../services/login.service';
 import { User } from '../../models/User.model';
 import { Router } from '@angular/router';
+import { Token } from '../../models/Token.model';
+import { TokenUtility } from '../Utilities/token.utilities';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,11 @@ export class LoginComponent {
   loginForm: FormGroup;
   isSubmitted = false;
 
-  constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router) {
+  constructor(private fb: FormBuilder,
+    private loginService: LoginService,
+    private router: Router,
+  ) 
+  {
     this.loginForm = this.fb.group({
       username: ['', [Validators.required, Validators.email]],  // Email validation
       password: ['', [Validators.required, Validators.minLength(6)]],  // Password validation
@@ -30,10 +36,10 @@ export class LoginComponent {
       };
 
       this.loginService.login(user).subscribe({
-        next: (response: any) => {
+        next: (token: Token) => {
+          new TokenUtility().saveTokenToLocalStorage(token.token);
           alert('Login successful!')
           this.router.navigate(['/authenticate']);  // Navigate to login page after registration
-
         },
         error: (error: any) => alert('Login failed!'),
       });

@@ -15,6 +15,9 @@ import { RegisterComponent } from "./register/register.component";
 import { RegisterService } from "./services/register.service/register.service";
 import { LoginComponent } from "./components/logincomponent/login.component";
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { RequestInterceptor } from "./components/interceptors/request.interceptor";
+
 @NgModule({
   declarations:[AppComponent,
     UploadToGoogleDriveComponent,
@@ -29,7 +32,12 @@ import { LoginComponent } from "./components/logincomponent/login.component";
     ReactiveFormsModule,],
   providers:[
     provideAnimationsAsync(),
-    RegisterService
+    RegisterService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: RequestInterceptor,
+      multi: true,
+    },
   ],
   bootstrap:[AppComponent]
 })
