@@ -1,0 +1,55 @@
+/* Full-page background with a softer gradient */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Soft blue to purple gradient */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Centered card with shadow and rounded corners */
+.login-card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.login-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #6a11cb;
+}
+
+.login-subtitle {
+  font-size: 16px;
+  text-align: center;
+  color: #6c757d;
+  margin-bottom: 16px;
+}
+
+/* Form field spacing */
+.form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .login-card {
+    width: 90%;
+  }
+}
