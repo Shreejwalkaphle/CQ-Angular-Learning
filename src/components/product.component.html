@@ -1,0 +1,31 @@
+<!-- <div class="product-container">
+  <div *ngFor="let product of products; let i = index" class="product-card">
+    <img [src]="product.image" alt="{{ product.name }}" class="product-image" />
+    <h2>{{ product.name }}</h2>
+
+    <div class="price-section">
+      <span class="original-price">${{ product.originalPrice }}</span>
+      <span class="discount">{{ product.discount }}% off</span>
+      <span class="new-price">${{ product.newPrice }}</span>
+    </div>
+
+    <button (click)="toggleDetails(i)">View Details</button>
+    <button (click)="buyProduct(product)">Buy Now</button>
+
+
+    <div class="product-details" *ngIf="product.showDetails">
+      <p><strong>Color:</strong> {{ product.color }}</p>
+      <p><strong>Manufacture Date:</strong> {{ product.manufactureDate }}</p>
+      <p><strong>Expiry Date:</strong> {{ product.expiryDate }}</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="product-card">
+  <h3>Lemonade</h3>
+  <p>Price: <span style="text-decoration: line-through; color: red;">$6</span> <span style="color: green;">$5</span></p>
+  <button (click)="buyLemonade()">Buy Lemonade</button>
+</div>
+
+
+
