@@ -1,0 +1,20 @@
+<div class="dashboard-container">
+  <h2>Welcome to Your Dashboard</h2>
+  <div class="balance-section">
+    <p>Your current balance: <strong>\${{ userBalance }}</strong></p>
+  </div>
+  
+  <div class="transaction-section">
+    <h2>Deposit</h2>
+    <input type="number" #depositInput placeholder="Enter amount" />
+    <button (click)="depositAmount(+depositInput.value)">Deposit</button>
+  </div>
+  
+  <div class="transaction-section">
+    <h2>Withdraw</h2>
+    <input type="number" #withdrawInput placeholder="Enter amount" />
+    <button (click)="withdrawAmount(+withdrawInput.value)">Withdraw</button>
+  </div>
+  
+
+</div>
