@@ -1,0 +1,25 @@
+<div class="payment-container">
+  <h1>Payment Gateway</h1>
+  <p><strong>Product:</strong> {{ productName }}</p>
+  <p><strong>Price:</strong> ${{ price }}</p>
+
+  <form (ngSubmit)="submitPayment()" #paymentForm="ngForm">
+    <div>
+      <label for="accountNumber">Account Number:</label>
+      <input type="text" id="accountNumber" [(ngModel)]="accountDetails.accountNumber" name="accountNumber" required />
+    </div>
+
+    <div>
+      <label for="cvv">CVV:</label>
+      <input type="password" id="cvv" [(ngModel)]="accountDetails.cvv" name="cvv" required />
+    </div>
+
+    <div>
+      <label for="accountHolderName">Account Holder Name:</label>
+      <input type="text" id="accountHolderName" [(ngModel)]="accountDetails.accountHolderName" name="accountHolderName"
+        required />
+    </div>
+
+    <button type="submit">Pay</button>
+  </form>
+</div>
